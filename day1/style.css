@@ -1,0 +1,40 @@
+html{
+	background-color: lightgray;
+}
+
+.banner{
+	position: fixed;
+	padding-left:2rem;
+}
+
+.main{
+	position: absolute;
+	width: 60rem;
+	top: 5rem;
+	left:15rem;
+	background-color: white;
+	border-radius: 20px;
+}
+
+h1{
+	position: absolute;
+	width:60rem;
+	left: 15rem;
+}
+
+section{
+	border-bottom: solid 1px #ccc;
+	padding-bottom: 3rem;
+}
+
+section:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+img{
+	top:2rem;
+	left:2rem;
+	float:left;
+}

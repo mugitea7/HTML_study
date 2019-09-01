@@ -1,0 +1,38 @@
+﻿<html>
+	<head>
+		<link rel="stylesheet" href="../slick/slick/slick.css">
+		<link rel="stylesheet" href="../slick/slick/slick-theme.css">
+		
+		<style type="text/css">
+		.slider {
+			width: 600px;
+			margin: 0 auto;
+		}
+		
+		.slider h1{
+			text-align: center;
+		}
+		</style>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../slick/slick/slick.min.js"></script>
+		<script>
+			$(function() {
+				$('.slider').slick({
+					autoplay: true,
+					autoplaySpeed: 2000,
+					vertical: true,
+					arrows: false
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="slider">
+			<div><h1>お知らせ</h1></div>
+			<div><h1>※重要※アップデートについて</h1></div>
+			<div><h1>新作ゲームを配信!!</h1></div>
+		</div>
+		<p>文章~~~~~~~~~~~~~~~~~</p>
+	</body>
+</html>

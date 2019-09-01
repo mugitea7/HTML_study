@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta lang="ja">
+
+    <style>
+        #center{
+            /*ボタンを中央に寄せる(好みの問題)*/
+            text-align: center;
+        }
+
+        #button{
+            /*フォントの設定*/
+            font-family: sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+
+            /*サイズ・幅の設定*/
+            width: 500px;
+            margin: 0;
+            padding: 10px;
+
+            /*背景色の設定*/
+            background-color: rgb(54, 100, 252);
+
+            /*角丸に*/
+            border-radius: 8px;
+
+            /*枠内に入ったらマウスポインタを変更*/
+            cursor: pointer;
+
+            /*変化秒数は0.2秒*/
+            transition: .2s;
+
+            /*ボタンの枠を消す*/
+            border: none;
+
+            /*影を付ける(横に0px、下に5px、1pxぼかし、1px広がる、色はblue)*/
+            box-shadow: 0px 5px 1px 1px blue;
+
+            /*相対座標を使用*/
+            position: relative;
+
+            /*上から0pxに配置(hoverで変更するため、設定)*/
+            top: 0px;
+        }
+
+        /*ボタンにカーソルを当てたとき*/
+        #button:hover{
+            /*上から3pxに配置(少し下にずれる)*/
+            top: 3px;
+
+            /*影を付ける(下側を2pxに変更)*/
+            box-shadow: 0px 2px 1px 1px blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="center">
+        <button type="button" id="button">押してみてね</button>
+    </div>
+</body>
+</html>

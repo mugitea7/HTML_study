@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+	<head>
+			<meta charset="utf-8">
+       		<link rel="stylesheet" href="slick/slick/slick.css">
+       		<link rel="stylesheet" href="slick/slick/slick-theme.css">
+       
+       		<style>
+       			.slider{
+       				height: 200px;
+       			}
+       			
+       			.topics{
+       				margin: 0em 10em 8em 3em;
+       			}
+       			
+       			.topics p {
+       				border-bottom: solid 1px gray;
+       				font-size: 25px;
+       			}
+       			
+       			.topics a:link{
+       				color: black;
+       			}
+       			
+       			.topics a:visited{
+       				color: black;
+       			}
+       			
+       			.topics a:hover{
+       				color: gray;
+       			}
+       			
+       			.topic{
+					vertical-align: top;
+       				display: inline-block;
+       				width:200px;
+       				height:200px;
+       				margin: 0em 1em 3em 1em;
+       			}
+       			
+       			.topic_img1{
+       				width: 200px;
+       				height: 140px;
+       				background-color: orange;
+       			}
+
+				.topic_img2{
+					width: 200px;
+					height: 140px;
+					background-color: aqua;
+				}
+       			
+       			.whats_new{
+       				margin: 0em 10em 8em 3em;
+       			}
+       			
+       			.whats_new p {
+       				border-bottom: solid 1px gray;
+       				font-size: 25px;
+       			}
+       			
+       			.whats_new li{
+       				margin: 1em 0em 2em 0em;
+       				list-style: none;
+       				border-bottom: dotted 1px gray;
+       			}
+       			
+       			.sns{
+       				margin: 0em 10em 8em 3em;
+       			}
+       			
+       			.sns p {
+       				border-bottom: solid 1px gray;
+       				font-size: 25px;
+       			}
+       			
+       			.sns .twitter_button{
+				font-size: 1.4em;
+				font-weight: bold;
+				padding: 10px 30px;
+				background-color: #0074bf;
+				color: #fff;
+				border-style: none;
+       			}
+       		</style>
+       
+	       	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	       	<script type="text/javascript" src="../slick/slick/slick.min.js"></script>
+	       	<script>
+	        	$(function() {
+	        		$('.slider').slick({
+						autoplay: true
+	               	});
+	           	});
+	       	</script>
+	</head>
+	
+	<body>
+        	<div class="slider">
+			<div><p>スライド1</p></div>
+			<div><p>スライド2</p></div>
+			<div><p>スライド3</p></div>
+		</div>
+		
+		<div class="topics">
+			<p>トピック</p>
+
+			<a href="pastproject_files/pastproject.html">
+				<div class="topic">
+					<div class="topic_img1">
+					</div>
+					<h4>制作物の紹介</h4>
+					<h6>今まで制作したものを紹介します。</h6>
+				</div>
+			</a>
+
+			<a href="https://mugitea.hatenablog.jp/" target="_blank">
+				<div class="topic">
+					<div class="topic_img2">
+					</div>
+					<h4>はてなブログ</h4>
+					<h6>やったことなどを備忘録的に記録します(別タブで開きます)。</h6>
+				</div>
+			</a>
+		</div>
+		
+		<div class="whats_new">
+			<p>更新履歴</p>
+			<ul>
+				<li>2019/08/20    制作物の紹介のページを更新しました。</li>
+				<li>2019/08/16    ページを作成しました。</li>
+			</ul>
+		</div>
+		
+		<div class="sns">
+			<p>SNS</p>
+			<button type="button" class="twitter_button" onClick="window.open('https://twitter.com/tea59595959','_blank')">Twitter</button>
+		</div>
+	</body>
+</html>

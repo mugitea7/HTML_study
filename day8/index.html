@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="ja">
+        <meta charset="utf-8">
+
+        <style>
+
+            .box{
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                transition: .5s;
+            }
+
+            .box:hover{
+                transform: scale(2);
+                animation: anim .7s ease;
+            }
+
+            @keyframes anim{
+                0%{ transform: scale(1); }
+                60%{ transform: scale(2); }
+                70%{ transform: scale(1.7); }
+                80%{ transform: scale(2.2); }
+                90%{ transform: scale(1.9); }
+                100%{ transform: scale(2); }
+            }
+
+            .box_translate{
+                background-color: pink;
+                width: 100px;
+                height: 100px;
+                transition: .5s;
+            }
+
+            .box_translate:hover{
+                transform: translate(25px);
+                animation: anim4 1s ease;
+            }
+
+            @keyframes anim4{
+                0%{ transform: translate(0px); }
+                70%{ transform: translate(50px); }
+                100%{ transform: translate(25px); }
+            }
+
+            .box_rotate{
+                background-color: gray;
+                width: 100px;
+                height: 100px;
+                transition: .5s;
+            }
+
+            .box_rotate:hover{
+                transform: rotate(-90deg);
+                animation: anim5 1s ease;
+            }
+
+            @keyframes anim5{
+                0%{ transform: rotate(0deg); }
+                80%{ transform: rotate(90deg); }
+                100%{ transform: rotate(-90deg); }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="box"></div>
+        <div class="box_translate"></div>
+        <div class="box_rotate"></div>
+    </body>
+
+</html>

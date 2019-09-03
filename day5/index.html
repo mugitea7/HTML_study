@@ -6,19 +6,34 @@
        		<link rel="stylesheet" href="slick/slick/slick-theme.css">
        
        		<style>
+				body{
+					font-family: Arial, Helvetica, sans-serif;
+					margin: 0;
+				}
+
+				#title{
+					font-weight: bold;
+					border-bottom: solid gray 1px;
+       				font-size: 30px;
+				}
+
+				#container{
+					padding: 0em 10em 8em 3em;
+				}
+
        			.slider{
        				height: 200px;
+					width: 98%;
        			}
        			
        			.topics{
-       				margin: 0em 10em 8em 3em;
+					background-color: white;
        			}
-       			
-       			.topics p {
-       				border-bottom: solid 1px gray;
-       				font-size: 25px;
-       			}
-       			
+
+				.topics a{
+					text-decoration: none;
+				}
+
        			.topics a:link{
        				color: black;
        			}
@@ -27,18 +42,36 @@
        				color: black;
        			}
        			
-       			.topics a:hover{
-       				color: gray;
-       			}
-       			
        			.topic{
+					padding: 10px;
+					border: solid #000000 1px;
 					vertical-align: top;
        				display: inline-block;
        				width:200px;
-       				height:200px;
+       				height:250px;
        				margin: 0em 1em 3em 1em;
+					box-shadow: 2px 2px 0px 0px black;
+					transition: .5s;
        			}
+
+				.topic:hover{
+					background-color: #eeeeee;
+					box-shadow: 0px 0px 0px 0px black;
+					transform: scale(1.1);
+					animation: topic-anim .5s ease;
+				}
+
+				@keyframes topic-anim{
+					0%{ transform: scale(1); }
+					50%{ transform: scale(1.2) }
+					100%{ transform: scale(1.1); }
+				}
        			
+				#img{
+					position: relative;
+					border: solid black 2px;
+				}
+
        			.topic_img1{
        				width: 200px;
        				height: 140px;
@@ -50,14 +83,15 @@
 					height: 140px;
 					background-color: aqua;
 				}
+
+				.topic_img3{
+					width: 200px;
+					height: 140px;
+					background-color: gray;
+				}
        			
        			.whats_new{
-       				margin: 0em 10em 8em 3em;
-       			}
-       			
-       			.whats_new p {
-       				border-bottom: solid 1px gray;
-       				font-size: 25px;
+					background-color: white;
        			}
        			
        			.whats_new li{
@@ -67,22 +101,26 @@
        			}
        			
        			.sns{
-       				margin: 0em 10em 8em 3em;
-       			}
-       			
-       			.sns p {
-       				border-bottom: solid 1px gray;
-       				font-size: 25px;
+					background-color: white;
        			}
        			
        			.sns .twitter_button{
-				font-size: 1.4em;
-				font-weight: bold;
-				padding: 10px 30px;
-				background-color: #0074bf;
-				color: #fff;
-				border-style: none;
+					position: relative;
+					font-size: 1.4em;
+					font-weight: bold;
+					padding: 10px 30px;
+					background-color: #0074bf;
+					color: #fff;
+					border-style: none;
+					box-shadow: 0px 5px 1px 0px blue;
+					top: 0px;
+					transition: .1s;
        			}
+
+				.sns .twitter_button:hover{
+					top:5px;
+					box-shadow: 0px 0px 1px 0px blue;
+				}
        		</style>
        
 	       	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -97,45 +135,91 @@
 	</head>
 	
 	<body>
-        	<div class="slider">
-			<div><p>スライド1</p></div>
-			<div><p>スライド2</p></div>
-			<div><p>スライド3</p></div>
+		<div>
+			<div class="slider">
+				<div><p>スライド1</p></div>
+				<div><p>スライド2</p></div>
+				<div><p>スライド3</p></div>
+			</div>
 		</div>
-		
+
 		<div class="topics">
-			<p>トピック</p>
-
-			<a href="pastproject_files/pastproject.html">
-				<div class="topic">
-					<div class="topic_img1">
+			<div id="container">
+				<p id="title">トピック</p>
+	
+				<a href="pastproject_files/pastproject.html">
+					<div class="topic">
+						<div class="topic_img1" id="img">
+						</div>
+						<h4>制作物の紹介</h4>
+						<h6>今まで制作したものを紹介します。</h6>
 					</div>
-					<h4>制作物の紹介</h4>
-					<h6>今まで制作したものを紹介します。</h6>
-				</div>
-			</a>
-
-			<a href="https://mugitea.hatenablog.jp/" target="_blank">
-				<div class="topic">
-					<div class="topic_img2">
+				</a>
+	
+				<a href="https://mugitea.hatenablog.jp/" target="_blank">
+					<div class="topic">
+						<div class="topic_img2" id="img">
+						</div>
+						<h4>はてなブログ</h4>
+						<h6>やったことなどを備忘録的に記録します(別タブで開きます)。</h6>
 					</div>
-					<h4>はてなブログ</h4>
-					<h6>やったことなどを備忘録的に記録します(別タブで開きます)。</h6>
-				</div>
-			</a>
+				</a>
+	
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+
+				<a href="https://github.com/mugitea7" target="_blank">
+					<div class="topic">
+						<div class="topic_img3" id="img">
+						</div>
+						<h4>GitHub</h4>
+						<h6>制作したものなどを置いています(別タブで開きます)。</h6>
+					</div>
+				</a>
+			</div>
 		</div>
-		
+
 		<div class="whats_new">
-			<p>更新履歴</p>
-			<ul>
-				<li>2019/08/20    制作物の紹介のページを更新しました。</li>
-				<li>2019/08/16    ページを作成しました。</li>
-			</ul>
+			<div id="container">
+				<p id="title">更新履歴</p>
+				<ul>
+					<li><time datetime="2019-09-03">2019/09/03</time>    トピックを追加しました。</li>
+					<li><time datetime="2019-08-20">2019/08/20</time>    制作物の紹介のページを更新しました。</li>
+					<li><time datetime="2019-08-16">2019/08/16</time>    ページを作成しました。</li>
+				</ul>
+			</div>
 		</div>
-		
+
 		<div class="sns">
-			<p>SNS</p>
-			<button type="button" class="twitter_button" onClick="window.open('https://twitter.com/tea59595959','_blank')">Twitter</button>
+			<div id="container">
+				<p id="title">SNS</p>
+				<button type="button" class="twitter_button" onClick="window.open('https://twitter.com/tea59595959','_blank')">Twitter</button>
+			</div>
 		</div>
+
 	</body>
 </html>

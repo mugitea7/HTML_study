@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="ja">
+        <meta charset="utf-8">
+
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+        <style>
+            body{
+                background-color: black;
+                color: #ffffff;
+                margin: 0;
+            }
+
+            .background {
+                position:absolute;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+  
+
+            .fade{
+                opacity: 0;
+                animation: fade 4s ease;
+            }
+
+            .max_window p{
+                font-size: 100px;
+                font-weight: bold;
+            }
+
+            @keyframes fade{
+                0%{ opacity: 0; transform: translateY(50px); }
+                50%{ opacity: 1; transform: translateY(0px); }
+                70%{ opacity: 1; }
+                100%{ opacity: 0; }
+            }
+
+            .max_window{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .topics{
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                animation: anim 4.5s ease;
+            }
+
+            .title{
+                font-family: 'OCRB';
+            }
+
+            .tmp{
+                font-family: 'OCRB';
+                display: flex;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .topic{
+                background-color: black;
+                margin: 5px 40px 5px 40px;
+                width: 300px;
+                height: 450px;
+                border: #ffffff solid 1px;
+                text-align: center;
+                transition: .5s;
+            }
+
+            .tmp:hover > .topic{
+                transform: scale(0.9);
+            }
+
+            .tmp > .topic:hover{
+                transform: scale(1.1);
+            }
+
+            .topic:hover{
+                background-color: white;
+                color: black;
+            }
+
+
+            @keyframes anim{
+                0%{ transform: scale(0); }
+                80%{ transform: scale(0); }
+                100%{ transform: scale(1); }
+            }
+
+            .topics > .title p{
+                margin: 20px 0 0 0;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bolder;
+            }
+
+            .topic p{
+                font-size: 25px;
+                font-weight: bolder;
+            }
+
+            .topic button{
+                border: none;
+                cursor: pointer;
+                width: 250px;
+                height: 70px;
+                font-weight: bold;
+                font-size: 30px;
+            }
+
+            .center{
+                text-align: center;
+            }
+
+            .topics{
+                visibility: hidden;
+            }
+
+            .topic,.title{
+                visibility: visible;
+            }
+
+            button{
+                font-family: 'Terminal';
+            }
+
+            #twitter{
+                border: solid white 1px;
+                color: white;
+                background-color: #00a6ce;
+                transition: .5s;
+            }
+
+            #twitter:hover{
+                border:solid #00a6ce 1px;
+                background-color: white;
+                color: #00a6ce;
+            }
+
+            #unityroom{
+                border: solid white 1px;
+                color: white;
+                background-color: #4632ff;
+                transition: .5s;
+            }
+
+            #unityroom:hover{
+                border:solid #4632ff 1px;
+                background-color: white;
+                color: #4632ff;
+            }
+
+            #github{
+                border:solid #e7e7e7 1px;
+                color: #e7e7e7;
+                background-color: black;
+                transition: .5s;
+            }
+
+            #github:hover{
+                border:solid black 1px;
+                color: black;
+                background-color: white;
+            }
+
+            #blog{
+                border: solid white 1px;
+                color: white;
+                background-color: #f78850;
+                transition: .5s;
+            }
+            #blog:hover{
+                border:solid #f78850 1px;
+                color: #f78850;
+                background-color: white;
+            }
+
+            #unity{
+                border: solid white 1px;
+                color: white;
+                background-color: #0e1015;
+                transition: .5s;
+            }
+
+            #unity:hover{
+                border:solid #0e1015 1px;
+                color: #0e1015;
+                background-color: white;
+            }
+
+            #blender{
+                border: solid white 1px;
+                color: white;
+                background-color: orange;
+                transition: .5s;
+            }
+
+            #blender:hover{
+                border:solid orange 1px;
+                color: orange;
+                background-color: white;
+            }
+
+        </style>
+
+        <script>
+            window.onload= function() {
+                    var particles = Particles.init({
+                        selector: '.background',
+                        sizeVariations: 10,
+                        color: ['#00bbdd', '#404B69', '#DBEDF3'],
+                        connectParticles: true
+                    });
+            }
+        </script>
+    </head>
+
+    <body>
+        <canvas class="background"></canvas>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+
+        <div class="max_window">
+            <p class="fade">ようこそ</p>
+        </div>
+
+        <div class="topics">
+            <div class="title">
+                    <p>トピック</p>
+            </div>
+
+            <div class="tmp">
+                <div class="topic">
+                    <p>更新履歴</p>
+                    <p>2019/09/07<br>index.htmlをこっちに置き換えました。</p>
+
+                    <p>2019/09/07<br>ページを作製</p>
+                </div>
+    
+                <div class="topic">
+                    <p>制作物</p>
+                    <p><button type="button" id="unity" onclick="window.open('pastproject_files/pastproject.html')">Unity</button></p>
+                    <p><button type="button" id="blender" onclick="alert('まだ作っていません...')">Blender</button></p>
+                </div>
+    
+                <div class="topic">
+                    <div class="center">
+                        <p>外部リンク</p>
+                        <p><button type="button" id="twitter" onclick="window.open('https://twitter.com/tea59595959')"><i class="fab fa-twitter"></i> Twitter</button></p>
+                        <p><button type="button" id="unityroom" onclick="window.open('https://unityroom.com/users/wkny6ejh5l3qgbdu810c')"><i class="fas fa-gamepad"></i> Unityroom</button></p>
+                        <p><button type="button" id="github" onclick="window.open('https://github.com/mugitea7')"><i class="fab fa-github"></i> Github</button></p>
+                        <p><button type="button" id="blog" onclick="window.open('https://mugitea.hatenablog.jp/')"><i class="fas fa-book"></i> Hatena Blog</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+    </body>
+</html>

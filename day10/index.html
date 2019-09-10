@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="ja">
+        <meta charset="utf-8">
+
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+        <style>
+            body{
+                background-color: lightblue;
+                color: #000000;
+                margin: 0;
+                animation: body_anim 3s ease;
+            }
+
+            @keyframes body_anim{
+                0%{ background-color: black; color: white }
+                50%{ background-color: black; color: white }
+                100%{ background-color: lightblue; color: black }
+            }
+
+
+            .background {
+                position: absolute;
+                display: block;
+                top: 0;
+                z-index: -1;
+                max-width: 100vw;
+                height: 100vh;
+            }
+
+            .fade{
+                opacity: 0;
+                animation: fade 4s ease;
+            }
+
+            .max_window p{
+                font-size: 100px;
+                font-weight: bold;
+            }
+
+            @keyframes fade{
+                0%{ opacity: 0; transform: translateY(50px); }
+                50%{ opacity: 1; transform: translateY(0px); }
+                70%{ opacity: 1; }
+                100%{ opacity: 0; }
+            }
+
+            .max_window{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                height: 100vh;
+                max-width: 100vw;
+            }
+
+            .contents{
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                max-width: 100vw;
+                height: 100vh;
+                animation: anim 4.5s ease;
+            }
+
+            @keyframes anim{
+                0%{ transform: scale(0); }
+                80%{ transform: scale(0); }
+                100%{ transform: scale(1); }
+            }
+
+            .title{
+                margin: 0px 0 0 0;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bolder;
+            }
+
+            .projects{
+                font-family: 'OCRB';
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                max-width: 100vw;
+                height: 100vh;
+            }
+
+            .project{
+                background-color: white;
+                margin: 5px 40px 5px 40px;
+                width: 300px;
+                height: 450px;
+                border: #000000 solid 1px;
+                text-align: center;
+                transition: .5s;
+            }
+        </style>
+
+        <script>
+            window.onload= function() {
+                    var particles = Particles.init({
+                        selector: '.background',
+                        sizeVariations: 80,
+                        color: ['#00bbdd', '#404B69', '#DBEDF3'],
+                        
+                    });
+            }
+        </script>
+
+    </head>
+    <body>
+            <canvas class="background"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+
+            <div class="max_window">
+                    <p class="fade">制作物(Unity)</p>
+            </div>
+
+            <div class="contents">
+                <div class="title">
+                    <p>制作物(Unity)</p>
+                </div>
+
+                <div class="projects">
+
+                    <div class="project" id="medal">
+                        <p>てすと</p>
+                    </div>
+
+                    <div class="project" id="medal">
+                        <p>てすと</p>
+                    </div>
+
+                    <div class="project" id="medal">
+                            <p>てすと</p>
+                    </div>
+
+                    <div class="project" id="medal">
+                            <p>てすと</p>
+                    </div>
+
+                    <div class="project" id="medal">
+                            <p>てすと</p>
+                    </div>
+
+                </div>
+            </div>
+    </body>
+</html>

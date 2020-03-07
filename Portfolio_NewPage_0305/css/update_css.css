@@ -1,0 +1,119 @@
+@charset "UTF-8";
+.update {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  height: auto;
+  margin: 0 0 50 0;
+}
+
+.update__head {
+  position: relative;
+}
+
+.update__head ::before {
+  position: absolute;
+  content: "";
+  background: #888888;
+  width: 100%;
+  height: 3px;
+  bottom: -3;
+}
+
+.update__head ::after {
+  position: absolute;
+  content: "";
+  background: red;
+  width: 100px;
+  height: 3px;
+  bottom: -3;
+  left: 0;
+}
+
+.update a {
+  text-decoration: none;
+}
+
+.update__underline {
+  width: 90%;
+  border: 1px #666666 dashed;
+}
+
+.update__lists {
+  position: relative;
+  top: 10;
+  border: 1px #666666 solid;
+  padding: 10 10 10 10;
+  height: 20em;
+  overflow-y: scroll;
+}
+
+.update__content {
+  height: 35;
+  margin: 10 0 10 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.update__type {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6em;
+  height: 1.5em;
+  margin: 0 30 0 30;
+  text-align: center;
+}
+
+.update__type--notice {
+  background-color: #DD3333;
+}
+
+.update__type--unityroom {
+  background-color: #335bdd;
+}
+
+.update__date {
+  margin: 0 60 0 30;
+}
+
+.update__body {
+  width: 47em;
+}
+
+.update__text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 13;
+}
+
+.update__text--notice {
+  color: white;
+  font-weight: normal;
+  font-family: '游ゴシック';
+}
+
+.update__text--unityroom {
+  color: white;
+  font-weight: normal;
+  font-family: '游ゴシック';
+}
+
+.update__text--date {
+  color: #333333;
+  font-weight: bolder;
+  font-family: Arial;
+}
+
+.update__text--body {
+  color: #333333;
+  font-weight: bolder;
+  font-family: '游ゴシック';
+}
+/*# sourceMappingURL=update_css.css.map */

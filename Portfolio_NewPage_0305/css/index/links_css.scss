@@ -1,10 +1,20 @@
+$pc: 1024px;    //PC
+$tab: 600px;    //タブレット
+$sp: 0px;     //スマホ
+
+@mixin break($breakpoint){
+    @media screen and (min-width: ($breakpoint)){
+        @content;
+    }
+}
+
 .links{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 
     width: 90%;
-    height: 400px;
+    margin: 50 0 100 0;
 
     &__head{
         position: relative;
@@ -31,16 +41,47 @@
 
     &__content{
         position: relative;
-        display: flex;
+        margin: 20 0 0 0;
+        
+        @include break($sp){
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include break($tab){
+            display: flex;
+        }  
+
+        @include break($pc){
+            display: flex;
+        }
 
         button{
+            
             width: 150;
             height: 75;
             margin: 10;
-            font-size: large;
             font-family: 'Terminal';
 
             cursor: pointer;
+
+            @include break($sp){
+                width: 140;
+                height: 70;
+                font-size: large;
+            }
+    
+            @include break($tab){
+                width: 150;
+                height: 75;
+                font-size: large;
+            }  
+    
+            @include break($pc){
+                width: 150;
+                height: 75;
+                font-size: large;
+            }
         }
     }
 }

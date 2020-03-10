@@ -4,7 +4,7 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 90%;
-  height: 400px;
+  margin: 50 0 100 0;
 }
 
 .links__head {
@@ -32,18 +32,65 @@
 
 .links__content {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 20 0 0 0;
+}
+
+@media screen and (min-width: 0px) {
+  .links__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .links__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .links__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .links__content button {
   width: 150;
   height: 75;
   margin: 10;
-  font-size: large;
   font-family: 'Terminal';
   cursor: pointer;
+}
+
+@media screen and (min-width: 0px) {
+  .links__content button {
+    width: 140;
+    height: 70;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .links__content button {
+    width: 150;
+    height: 75;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .links__content button {
+    width: 150;
+    height: 75;
+    font-size: large;
+  }
 }
 
 #twitter {
